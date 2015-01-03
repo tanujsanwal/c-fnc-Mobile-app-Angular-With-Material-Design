@@ -2,7 +2,7 @@ angular.module('starter.controllers', ['ngRoute'])
 
     .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state) {
         // Form data for the login modal
-        $scope.loginData = {username: 9920942573, password: "1234"};
+        $scope.loginData = {};
 
         // Create the login modal that we will use later
         $ionicModal.fromTemplateUrl('templates/login.html', {

@@ -9,8 +9,7 @@ angular.module('starter', ['ionic', 'starter.controllers','ngMaterial'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
 
-    Parse.initialize("54exU9DzVeENPnZNbZqpGU4zahjMSjtX4n1eBrdj", "750gkZi44Duq1nLSc9uHexdRz3SaRVAOA0TtcJ5L");
-
+    
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
