@@ -1,0 +1,47 @@
+
+<ion-view view-title="">
+    <ion-content  ng-controller="homeCtrl" >
+        <h2  style="color:#0c63ee" class="slideLeft"><center> Home </center></h2>
+        <h3  style="color:#0c63ee" class="slideRight">{{uname}}</h3>
+        <h4 style="padding-left: 2%;color:#0c63ee" class="bounce">My Cards</h4>
+
+            <div class="card" >
+                <div class="item item-text-wrap" ng-repeat="card in cards">
+                    {{card.attributes.cardNumber}} <br>
+                    <b>Card Expiry:</b> {{card.attributes.cardExpiry}} <br/>
+                    <ul class="list">
+
+                        <li class="item item-toggle">
+                            {{uname}}
+
+                          <!--  <ion-toggle ng-repeat="item in settingsList"
+                                        ng-model="item.checked"
+                                        ng-checked="item.checked">
+                                {{ item.text }}
+                            </ion-toggle>-->
+
+                            <div class="followrow" ng-controller="ImageToggleCtrl">
+                            <button ng-click="togg()" ng-show="card.attributes.status">True<img id="followbutton" ng-src="{{followBtnImgUrl}}"  /></button>
+                            <button  ng-click="toggle1()"  ng-show="!card.attributes.status">False</button>
+                            </div>
+
+
+                        <!--    <button ng-click="toggle()" ng-hide="myVar">True</button>
+                            <button  ng-click="toggle1()"  ng-hide="myVar1">False</button>
+
+
+-->
+                        </li>
+
+                        ...
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+    </ion-content>
+</ion-view>

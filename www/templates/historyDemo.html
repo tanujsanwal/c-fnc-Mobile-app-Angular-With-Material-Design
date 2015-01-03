@@ -1,0 +1,125 @@
+<ion-view view-title="">
+    <ion-content>
+
+
+        <div ng-class="{slideLeft:card.attributes.status,slideRight:!card.attributes.status}">
+            <md-card>
+            <div class="item item-text-wrap " ng-class="{green:card.attributes.status,green  :!card.attributes.status}">
+                <!--    <img src="img/visa.jpg" ng-show="cardtypeimg[$index]" >
+                    <img src="img/master.jpg" style="width: 40px;" ng-show="!cardtypeimg[$index]" >-->
+                <div>
+                    {{name}}
+                </div>
+
+                {{cardNumber}}
+                <br/>
+                Card Expiry : {{cardExpiry}}
+            </div>
+            </md-card>
+        </div>
+
+
+
+        <md-tabs class="md-accent" md-selected="data.selectedIndex">
+            <md-tab id="tab1" aria-controls="tab1-content">
+                History
+            </md-tab>
+            <md-tab id="tab2" aria-controls="tab2-content" ng-disabled="data.secondLocked">
+                Rules
+            </md-tab>
+            <!-- <md-tab id="tab3" aria-controls="tab3-content">
+
+             </md-tab>-->
+        </md-tabs>
+        <ng-switch on="data.selectedIndex" class="tabpanel-container">
+            <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()"
+                 md-swipe-right="previous()">
+                <div style="padding-left:2%">
+                    <p style="color:#0c63ee;padding-left:2%">
+                    <h4> Purchase</h4>
+                    27/11/2014 11:30am USD 52
+                    <br>
+                    881-FOOD And Beverage
+                    </p>
+
+                    <br>
+
+                    <p style="color:#0c63ee;padding-left:2%">
+                    <h4> Purchase</h4>
+                    25/11/2014 1:30pm USD 102
+                    <br>
+                    Shopper's Stop
+                    </p>
+                    <br>
+
+                    <p style="color:#0c63ee;padding-left:2%">
+                    <h4> Purchase</h4>
+                    23/11/2014 5:30pm USD 72
+                    <br>
+                    881-FOOD And Beverage
+                    </p>
+                </div>
+            </div>
+            <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()"
+                 md-swipe-right="previous()">
+                <div style="padding-left:2%">
+                    <p style="color:#0c63ee;padding-left:2%">
+                    <h4> Purchase</h4>
+                    23/11/2014 5:30pm USD 72
+                    <br>
+                    881-FOOD And Beverage
+                    </p>
+                </div>
+            </div>
+            <!-- <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
+
+
+
+             </div>-->
+        </ng-switch>
+        <!--  <div class="after-tabs-area" layout="row" layout-sm="column" layout-margin layout-align="left center">
+              <md-text-float type="number" label="Selected Index" ng-model="data.selectedIndex"></md-text-float>
+              <div flex></div>
+              <span>Item Two: </span>
+              <md-checkbox ng-model="data.secondLocked" aria-label="Disabled">
+                  Disabled
+              </md-checkbox>
+          </div>
+  -->
+
+
+        <!-- <h3 style="color:#0c63ee;padding-left:2%">
+             <center>History</center>
+         </h3>
+         <div style="padding-left:2%">
+         <p style="color:#0c63ee;padding-left:2%">
+         <h4>    Purchase</h4>
+         27/11/2014 11:30am USD 52
+         <br>
+         881-FOOD And Beverage
+         </p>
+
+         <br>
+
+         <p style="color:#0c63ee;padding-left:2%">
+         <h4>    Purchase</h4>
+         25/11/2014 1:30pm USD 102
+         <br>
+         Shopper's Stop
+         </p>
+         <br>
+
+         <p style="color:#0c63ee;padding-left:2%">
+         <h4>    Purchase</h4>
+         23/11/2014 5:30pm USD 72
+         <br>
+         881-FOOD And Beverage
+         </p>
+         </div>-->
+    </ion-content>
+</ion-view>
+
+
+
+
+

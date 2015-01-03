@@ -1,0 +1,24 @@
+  <ion-view view-title="">
+
+    <ion-content>
+     <!-- <h2 style="color:#0c63ee"><center> C - Fence </center></h2>-->
+
+      <form ng-submit="doLogin()">
+        <div class="list">
+          <h3 style="color:#0c63ee;padding-left:4%;margin-top:10px;">Please Enter Your Login Credentials </h3 >
+          <label class="item item-input">
+            <span class="input-label slideLeft" style="color:#0c63ee">Username</span>
+            <input type="number" ng-model="loginData.username" required/>
+          </label>
+          <label class="item item-input">
+            <span class="input-label slideLeft" style="color:#0c63ee">Password</span>
+            <input type="password" ng-model="loginData.password" required/>
+          </label>
+          <label class="item">
+          <center>  <md-button class="md-raised md-primary" type="submit">Log in</md-button>
+          </center>
+          </label>
+        </div>
+      </form>
+    </ion-content>
+  </ion-view>

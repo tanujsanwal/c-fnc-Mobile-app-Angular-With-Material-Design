@@ -1,0 +1,76 @@
+<ion-view view-title="" xmlns="http://www.w3.org/1999/html">
+    <ion-content ng-controller="homeCtrl">
+        <!--  <h2 style="color:#0c63ee" class="slideLeft">
+              <center> Home</center>
+          </h2>--><br>
+        <md-card>
+        <div class="row">
+            <div class="col">
+
+                <h3 style="color:#0c63ee;padding-left: 2%" class="slideRight">{{uname}}</h3>
+                <h3 style="color:#0c63ee;padding-left: 2%" class="bounce">My Cards</h3>
+
+
+            </div>
+
+            <div style="float:right" class="col slideLeft">
+                <a href="#/app/addcard" style="text-decoration: none">
+
+                    <md-button class="md-raised md-primary"  >Add New Card</md-button>
+
+                </a>
+            </div>
+        </div>
+
+            <div ng-class="{slideLeft:card.attributes.status,slideRight:!card.attributes.status}"
+                 ng-repeat="card in cards">
+                <md-card>
+                    <div class="item item-text-wrap "
+                         ng-class="{green:card.attributes.status,red:!card.attributes.status}">
+
+                        <a href="#/app/historyDemo/{{$index}}" style="text-decoration: none;"
+                           ng-click="cardStatusToggle12($index,card.attributes.cardExpiry,card.attributes.cardNumber)">
+
+                        <img src="img/Visa_Logo.png" style="width: 50px;" ng-show="cardtypeimg[$index]">
+                        <img src="img/mc_brand.png" style="width: 50px;" ng-show="!cardtypeimg[$index]">
+
+
+                        <br>
+
+                        {{card.attributes.cardNumber}} <br>
+
+                      Card
+                            Expiry:{{card.attributes.cardExpiry}} <br/>
+                        <!--<ul class="card">-->
+
+                        <div>
+                            {{uname}}
+                            <!--   <ion-toggle ng-model="card.attributes.status"
+                                           ng-change="cardStatusToggle($index ,card.attributes.cardNumber,card.attributes.status )">
+                                   {{$index}}
+                               </ion-toggle>-->
+                        </a>
+                        <div style="float: right;margin-top: -65px;"
+                                 ng-click="cardStatusToggle($index ,card.attributes.cardNumber,card.attributes.status)"
+                                 ng-show="card.attributes.status"><img class="bounce"
+                                                                       ng-src="img/on.png"
+                                                                       style="width: 86px;">
+                            </div>
+                            <div style="float: right;margin-top: -65px;"
+                                 ng-click="cardStatusToggle($index ,card.attributes.cardNumber,card.attributes.status )"
+                                 ng-show="!card.attributes.status"><img class="bounce"
+                                                                        ng-src="img/off.png"
+                                                                        style="width: 86px;">
+                            </div>
+
+                        </div>
+
+
+                        <!--</ul>-->
+                    </div>
+                </md-card>
+            </div>
+        </md-card>
+
+    </ion-content>
+</ion-view>

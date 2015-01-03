@@ -1,0 +1,38 @@
+
+<ion-view view-title="">
+    <ion-content>
+
+
+        <div class="demo-container">
+            <div class="card-wrapper"></div>
+            <div class="form-container active">
+        <form ng-submit="doInput()">
+            <div class="row list">
+                <label class="col item item-input">
+                    Enter Card Number:
+                    <input placeholder="Card number" type="text" name="number" ng-model="inputData.cardnumber" required>
+                </label>
+            </div>
+            <div class="row list">
+                <label class="col item item-input">
+                    Enter Expiry Date ex:122017
+                    <input placeholder="MM/YY" type="text" name="expiry"  ng-model="inputData.expirydate" required>
+                </label>
+                <label class="col item item-input">
+                    Enter CVV 2
+                    <input placeholder="CVC" type="text" name="cvc" ng-model="inputData.cvv" required>
+                </label>
+            </div>
+            <div class="row list">
+
+                    <md-button class="md-raised md-primary" type="submit">&nbsp;Add Card &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</md-button>
+                    <input placeholder="Full name" type="text" name="name" value={{name}} style="visibility: hidden">
+
+
+            </div>
+        </form>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
